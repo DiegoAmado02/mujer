@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Cuentados
+    </ion-title>
+    <ion-button slot="end" (click)="logOut()">
+      <ion-icon name="exit"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <h3>
+        <ion-text color="primary">Me podrás romper la mano, pero nunca la voz</ion-text>
+      </h3>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <!-- Textarea in an item with a floating label -->
+        <ion-item>
+          <ion-label color="secondary" position="floating">Tú caso</ion-label>
+          <ion-textarea color="secondary" rows="6" maxLength="500" placeholder="Cuentanos tu caso"
+            [(ngModel)]="caso.caso"></ion-textarea>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <section>
+          <ion-button expand="block" (click)="saveCaso()">Enviar</ion-button>
+        </section>
+        <section>
+          <ion-button expand="block" (click)="selectCaso()">Consulta</ion-button>
+        </section>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
